@@ -1,8 +1,11 @@
 package router
 
-import "github.com/gin-gonic/gin"
+import (
+	"github.com/gin-gonic/gin"
+	. "gin_restful/api"
+)
 
-func initRouter() *gin.Engine {
+func InitRouter() *gin.Engine {
 	router := gin.Default()
 	router.GET("/", IndexUsers)
 

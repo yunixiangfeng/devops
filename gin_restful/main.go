@@ -1,9 +1,13 @@
 package main
 
-import "gin_restful/db"
+import (
+	"gin_restful/db"
+
+	"gin_restful/router"
+)
 
 func main() {
 	defer db.SqlDB.Close()
-	router := initRouter()
+	router := router.InitRouter()
 	router.Run(":8806") // 启动服务了
 }
